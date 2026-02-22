@@ -1,0 +1,26 @@
+# Carpetas de compilación
+bin/
+obj/
+
+# Archivos de usuario
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Configuración de IDE
+.vs/
+.vscode/
+
+# Archivos de logs y temporales
+*.log
+*.tmp
+*.temp
+
+# Paquetes
+packages/
+*.nupkg
+
+# Archivos de publicación
+*.publish.xml
+*.deploy
