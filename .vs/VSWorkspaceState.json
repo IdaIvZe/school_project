@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\School.Domain",
+    "\\School.Domain\\Entities",
+    "\\School.Domain\\Enums",
+    "\\School.Infrastructure",
+    "\\School.Infrastructure\\bin",
+    "\\School.Infrastructure\\Persistence"
+  ],
+  "SelectedNode": "\\School.slnx",
+  "PreviewInSolutionExplorer": false
+}

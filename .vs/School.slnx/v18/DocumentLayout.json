@@ -1,0 +1,382 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AA871B7B-A3EB-0D8F-180F-4EEE011F9925}|School.Application\\School.Application.csproj|c:\\users\\orlin.aguilar\\source\\repos\\backendpracticing\\school\\school.application\\mappings\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA871B7B-A3EB-0D8F-180F-4EEE011F9925}|School.Application\\School.Application.csproj|solutionrelative:school.application\\mappings\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AA871B7B-A3EB-0D8F-180F-4EEE011F9925}|School.Application\\School.Application.csproj|c:\\users\\orlin.aguilar\\source\\repos\\backendpracticing\\school\\school.application\\dtos\\personaporroldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA871B7B-A3EB-0D8F-180F-4EEE011F9925}|School.Application\\School.Application.csproj|solutionrelative:school.application\\dtos\\personaporroldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AA871B7B-A3EB-0D8F-180F-4EEE011F9925}|School.Application\\School.Application.csproj|c:\\users\\orlin.aguilar\\source\\repos\\backendpracticing\\school\\school.application\\dtos\\personadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA871B7B-A3EB-0D8F-180F-4EEE011F9925}|School.Application\\School.Application.csproj|solutionrelative:school.application\\dtos\\personadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AA871B7B-A3EB-0D8F-180F-4EEE011F9925}|School.Application\\School.Application.csproj|c:\\users\\orlin.aguilar\\source\\repos\\backendpracticing\\school\\school.application\\dtos\\personacredencialesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA871B7B-A3EB-0D8F-180F-4EEE011F9925}|School.Application\\School.Application.csproj|solutionrelative:school.application\\dtos\\personacredencialesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1EA9989F-5A9E-0ABA-7859-2A9376F19AD0}|School.Infrastructure\\School.Infrastructure.csproj|c:\\users\\orlin.aguilar\\source\\repos\\backendpracticing\\school\\school.infrastructure\\persistence\\data\\datapersona.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1EA9989F-5A9E-0ABA-7859-2A9376F19AD0}|School.Infrastructure\\School.Infrastructure.csproj|solutionrelative:school.infrastructure\\persistence\\data\\datapersona.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE1EE471-76CF-0945-BD22-BC7FB81FBF41}|School\\School.Api.csproj|c:\\users\\orlin.aguilar\\source\\repos\\backendpracticing\\school\\school\\controllers\\personacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE1EE471-76CF-0945-BD22-BC7FB81FBF41}|School\\School.Api.csproj|solutionrelative:school\\controllers\\personacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AA871B7B-A3EB-0D8F-180F-4EEE011F9925}|School.Application\\School.Application.csproj|c:\\users\\orlin.aguilar\\source\\repos\\backendpracticing\\school\\school.application\\school.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{AA871B7B-A3EB-0D8F-180F-4EEE011F9925}|School.Application\\School.Application.csproj|solutionrelative:school.application\\school.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AA871B7B-A3EB-0D8F-180F-4EEE011F9925}|School.Application\\School.Application.csproj|c:\\users\\orlin.aguilar\\source\\repos\\backendpracticing\\school\\school.application\\services\\personaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA871B7B-A3EB-0D8F-180F-4EEE011F9925}|School.Application\\School.Application.csproj|solutionrelative:school.application\\services\\personaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AA871B7B-A3EB-0D8F-180F-4EEE011F9925}|School.Application\\School.Application.csproj|c:\\users\\orlin.aguilar\\source\\repos\\backendpracticing\\school\\school.application\\interfacesservice\\ipersonaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA871B7B-A3EB-0D8F-180F-4EEE011F9925}|School.Application\\School.Application.csproj|solutionrelative:school.application\\interfacesservice\\ipersonaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F02A297A-242E-2648-0B83-BF653EE39191}|School.Domain\\School.Domain.csproj|c:\\users\\orlin.aguilar\\source\\repos\\backendpracticing\\school\\school.domain\\entities\\persona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F02A297A-242E-2648-0B83-BF653EE39191}|School.Domain\\School.Domain.csproj|solutionrelative:school.domain\\entities\\persona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1EA9989F-5A9E-0ABA-7859-2A9376F19AD0}|School.Infrastructure\\School.Infrastructure.csproj|c:\\users\\orlin.aguilar\\source\\repos\\backendpracticing\\school\\school.infrastructure\\persistence\\repository\\personarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1EA9989F-5A9E-0ABA-7859-2A9376F19AD0}|School.Infrastructure\\School.Infrastructure.csproj|solutionrelative:school.infrastructure\\persistence\\repository\\personarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F02A297A-242E-2648-0B83-BF653EE39191}|School.Domain\\School.Domain.csproj|c:\\users\\orlin.aguilar\\source\\repos\\backendpracticing\\school\\school.domain\\interfacesrepository\\ipersonarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F02A297A-242E-2648-0B83-BF653EE39191}|School.Domain\\School.Domain.csproj|solutionrelative:school.domain\\interfacesrepository\\ipersonarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE1EE471-76CF-0945-BD22-BC7FB81FBF41}|School\\School.Api.csproj|c:\\users\\orlin.aguilar\\source\\repos\\backendpracticing\\school\\school\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE1EE471-76CF-0945-BD22-BC7FB81FBF41}|School\\School.Api.csproj|solutionrelative:school\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F02A297A-242E-2648-0B83-BF653EE39191}|School.Domain\\School.Domain.csproj|c:\\users\\orlin.aguilar\\source\\repos\\backendpracticing\\school\\school.domain\\respuesta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F02A297A-242E-2648-0B83-BF653EE39191}|School.Domain\\School.Domain.csproj|solutionrelative:school.domain\\respuesta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AA871B7B-A3EB-0D8F-180F-4EEE011F9925}|School.Application\\School.Application.csproj|c:\\users\\orlin.aguilar\\source\\repos\\backendpracticing\\school\\school.application\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA871B7B-A3EB-0D8F-180F-4EEE011F9925}|School.Application\\School.Application.csproj|solutionrelative:school.application\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F02A297A-242E-2648-0B83-BF653EE39191}|School.Domain\\School.Domain.csproj|c:\\users\\orlin.aguilar\\source\\repos\\backendpracticing\\school\\school.domain\\enums\\nacionalidades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F02A297A-242E-2648-0B83-BF653EE39191}|School.Domain\\School.Domain.csproj|solutionrelative:school.domain\\enums\\nacionalidades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F02A297A-242E-2648-0B83-BF653EE39191}|School.Domain\\School.Domain.csproj|c:\\users\\orlin.aguilar\\source\\repos\\backendpracticing\\school\\school.domain\\enums\\estadopersona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F02A297A-242E-2648-0B83-BF653EE39191}|School.Domain\\School.Domain.csproj|solutionrelative:school.domain\\enums\\estadopersona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F02A297A-242E-2648-0B83-BF653EE39191}|School.Domain\\School.Domain.csproj|c:\\users\\orlin.aguilar\\source\\repos\\backendpracticing\\school\\school.domain\\school.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{F02A297A-242E-2648-0B83-BF653EE39191}|School.Domain\\School.Domain.csproj|solutionrelative:school.domain\\school.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE1EE471-76CF-0945-BD22-BC7FB81FBF41}|School\\School.Api.csproj|c:\\users\\orlin.aguilar\\source\\repos\\backendpracticing\\school\\school\\school.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{FE1EE471-76CF-0945-BD22-BC7FB81FBF41}|School\\School.Api.csproj|solutionrelative:school\\school.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1EA9989F-5A9E-0ABA-7859-2A9376F19AD0}|School.Infrastructure\\School.Infrastructure.csproj|c:\\users\\orlin.aguilar\\source\\repos\\backendpracticing\\school\\school.infrastructure\\school.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{1EA9989F-5A9E-0ABA-7859-2A9376F19AD0}|School.Infrastructure\\School.Infrastructure.csproj|solutionrelative:school.infrastructure\\school.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1EA9989F-5A9E-0ABA-7859-2A9376F19AD0}|School.Infrastructure\\School.Infrastructure.csproj|c:\\users\\orlin.aguilar\\source\\repos\\backendpracticing\\school\\school.infrastructure\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1EA9989F-5A9E-0ABA-7859-2A9376F19AD0}|School.Infrastructure\\School.Infrastructure.csproj|solutionrelative:school.infrastructure\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PersonaCredencialesDto.cs",
+              "DocumentMoniker": "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School.Application\\DTOs\\PersonaCredencialesDto.cs",
+              "RelativeDocumentMoniker": "School.Application\\DTOs\\PersonaCredencialesDto.cs",
+              "ToolTip": "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School.Application\\DTOs\\PersonaCredencialesDto.cs",
+              "RelativeToolTip": "School.Application\\DTOs\\PersonaCredencialesDto.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAsAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-20T21:10:27.395Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Persona.cs",
+              "DocumentMoniker": "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School.Domain\\Entities\\Persona.cs",
+              "RelativeDocumentMoniker": "School.Domain\\Entities\\Persona.cs",
+              "ToolTip": "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School.Domain\\Entities\\Persona.cs",
+              "RelativeToolTip": "School.Domain\\Entities\\Persona.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwA8AAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-19T17:11:04.146Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School.Application\\Mappings\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "School.Application\\Mappings\\MappingProfile.cs",
+              "ToolTip": "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School.Application\\Mappings\\MappingProfile.cs",
+              "RelativeToolTip": "School.Application\\Mappings\\MappingProfile.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAuwBoAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-19T20:16:10.303Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PersonaController.cs",
+              "DocumentMoniker": "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School\\Controllers\\PersonaController.cs",
+              "RelativeDocumentMoniker": "School\\Controllers\\PersonaController.cs",
+              "ToolTip": "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School\\Controllers\\PersonaController.cs",
+              "RelativeToolTip": "School\\Controllers\\PersonaController.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAkwC4AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-19T22:25:53.799Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Respuesta.cs",
+              "DocumentMoniker": "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School.Domain\\Respuesta.cs",
+              "RelativeDocumentMoniker": "School.Domain\\Respuesta.cs",
+              "ToolTip": "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School.Domain\\Respuesta.cs",
+              "RelativeToolTip": "School.Domain\\Respuesta.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-19T16:02:36.922Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PersonaService.cs",
+              "DocumentMoniker": "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School.Application\\Services\\PersonaService.cs",
+              "RelativeDocumentMoniker": "School.Application\\Services\\PersonaService.cs",
+              "ToolTip": "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School.Application\\Services\\PersonaService.cs",
+              "RelativeToolTip": "School.Application\\Services\\PersonaService.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAuwEYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-19T19:32:25.737Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PersonaDto.cs",
+              "DocumentMoniker": "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School.Application\\DTOs\\PersonaDto.cs",
+              "RelativeDocumentMoniker": "School.Application\\DTOs\\PersonaDto.cs",
+              "ToolTip": "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School.Application\\DTOs\\PersonaDto.cs",
+              "RelativeToolTip": "School.Application\\DTOs\\PersonaDto.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA4AAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-19T18:40:40.853Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IPersonaService.cs",
+              "DocumentMoniker": "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School.Application\\InterfacesService\\IPersonaService.cs",
+              "RelativeDocumentMoniker": "School.Application\\InterfacesService\\IPersonaService.cs",
+              "ToolTip": "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School.Application\\InterfacesService\\IPersonaService.cs",
+              "RelativeToolTip": "School.Application\\InterfacesService\\IPersonaService.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAiwA8AAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-20T15:19:51.098Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PersonaPorRolDto.cs",
+              "DocumentMoniker": "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School.Application\\DTOs\\PersonaPorRolDto.cs",
+              "RelativeDocumentMoniker": "School.Application\\DTOs\\PersonaPorRolDto.cs",
+              "ToolTip": "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School.Application\\DTOs\\PersonaPorRolDto.cs",
+              "RelativeToolTip": "School.Application\\DTOs\\PersonaPorRolDto.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-20T19:05:57.191Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DataPersona.json",
+              "DocumentMoniker": "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School.Infrastructure\\Persistence\\Data\\DataPersona.json",
+              "RelativeDocumentMoniker": "School.Infrastructure\\Persistence\\Data\\DataPersona.json",
+              "ToolTip": "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School.Infrastructure\\Persistence\\Data\\DataPersona.json",
+              "RelativeToolTip": "School.Infrastructure\\Persistence\\Data\\DataPersona.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-02-20T16:15:06.061Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PersonaRepository.cs",
+              "DocumentMoniker": "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School.Infrastructure\\Persistence\\Repository\\PersonaRepository.cs",
+              "RelativeDocumentMoniker": "School.Infrastructure\\Persistence\\Repository\\PersonaRepository.cs",
+              "ToolTip": "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School.Infrastructure\\Persistence\\Repository\\PersonaRepository.cs",
+              "RelativeToolTip": "School.Infrastructure\\Persistence\\Repository\\PersonaRepository.cs",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAowFkAAABcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-19T17:44:51.725Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IPersonaRepository.cs",
+              "DocumentMoniker": "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School.Domain\\InterfacesRepository\\IPersonaRepository.cs",
+              "RelativeDocumentMoniker": "School.Domain\\InterfacesRepository\\IPersonaRepository.cs",
+              "ToolTip": "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School.Domain\\InterfacesRepository\\IPersonaRepository.cs",
+              "RelativeToolTip": "School.Domain\\InterfacesRepository\\IPersonaRepository.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAtwAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-19T17:43:08.228Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School\\Program.cs",
+              "RelativeDocumentMoniker": "School\\Program.cs",
+              "ToolTip": "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School\\Program.cs",
+              "RelativeToolTip": "School\\Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-19T20:34:50.925Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School.Application\\Class1.cs",
+              "RelativeDocumentMoniker": "School.Application\\Class1.cs",
+              "ToolTip": "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School.Application\\Class1.cs",
+              "RelativeToolTip": "School.Application\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-19T16:03:42.03Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Nacionalidades.cs",
+              "DocumentMoniker": "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School.Domain\\Enums\\Nacionalidades.cs",
+              "RelativeDocumentMoniker": "School.Domain\\Enums\\Nacionalidades.cs",
+              "ToolTip": "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School.Domain\\Enums\\Nacionalidades.cs",
+              "RelativeToolTip": "School.Domain\\Enums\\Nacionalidades.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-19T17:09:34.624Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "EstadoPersona.cs",
+              "DocumentMoniker": "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School.Domain\\Enums\\EstadoPersona.cs",
+              "RelativeDocumentMoniker": "School.Domain\\Enums\\EstadoPersona.cs",
+              "ToolTip": "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School.Domain\\Enums\\EstadoPersona.cs",
+              "RelativeToolTip": "School.Domain\\Enums\\EstadoPersona.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-19T17:16:19.137Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "School.Application.csproj",
+              "DocumentMoniker": "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School.Application\\School.Application.csproj",
+              "RelativeDocumentMoniker": "School.Application\\School.Application.csproj",
+              "ToolTip": "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School.Application\\School.Application.csproj",
+              "RelativeToolTip": "School.Application\\School.Application.csproj",
+              "ViewState": "AgIAAAAAAAAAn9IelDkPwBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-02-19T16:05:49.207Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "School.Domain.csproj",
+              "DocumentMoniker": "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School.Domain\\School.Domain.csproj",
+              "RelativeDocumentMoniker": "School.Domain\\School.Domain.csproj",
+              "ToolTip": "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School.Domain\\School.Domain.csproj",
+              "RelativeToolTip": "School.Domain\\School.Domain.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-02-19T16:22:24.83Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "School.http",
+              "DocumentMoniker": "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School\\School.http",
+              "RelativeDocumentMoniker": "School\\School.http",
+              "ToolTip": "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School\\School.http",
+              "RelativeToolTip": "School\\School.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2026-02-19T21:28:05.531Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "School.Infrastructure.csproj",
+              "DocumentMoniker": "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School.Infrastructure\\School.Infrastructure.csproj",
+              "RelativeDocumentMoniker": "School.Infrastructure\\School.Infrastructure.csproj",
+              "ToolTip": "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School.Infrastructure\\School.Infrastructure.csproj",
+              "RelativeToolTip": "School.Infrastructure\\School.Infrastructure.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-02-19T16:17:10.89Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School.Infrastructure\\Class1.cs",
+              "RelativeDocumentMoniker": "School.Infrastructure\\Class1.cs",
+              "ToolTip": "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School.Infrastructure\\Class1.cs",
+              "RelativeToolTip": "School.Infrastructure\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-19T16:05:33.243Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+[
+  {
+    "Nombres": "Cliente 1",
+    "Apellidos": "string",
+    "nombreUsuario": "oraguilar",
+    "password": "1234",
+    "FechanNacimiento": "string",
+    "Nacionalidad": 0,
+    "Direccion": "string",
+    "Telefono": "string",
+    "Email": "string",
+    "Estado": 0,
+    "FechaCreacion": "0001-01-01T00:00:00",
+    "FechaActualizacion": "0001-01-01T00:00:00",
+    "rol": "admin"
+  }
+]

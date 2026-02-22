@@ -1,0 +1,15 @@
+C:\Users\orlin.aguilar\source\repos\BackendPracticing\School\School.Application\bin\Debug\net8.0\School.Application.deps.json
+C:\Users\orlin.aguilar\source\repos\BackendPracticing\School\School.Application\bin\Debug\net8.0\School.Application.dll
+C:\Users\orlin.aguilar\source\repos\BackendPracticing\School\School.Application\bin\Debug\net8.0\School.Application.pdb
+C:\Users\orlin.aguilar\source\repos\BackendPracticing\School\School.Application\bin\Debug\net8.0\School.Domain.dll
+C:\Users\orlin.aguilar\source\repos\BackendPracticing\School\School.Application\bin\Debug\net8.0\School.Domain.pdb
+C:\Users\orlin.aguilar\source\repos\BackendPracticing\School\School.Application\obj\Debug\net8.0\School.Application.csproj.AssemblyReference.cache
+C:\Users\orlin.aguilar\source\repos\BackendPracticing\School\School.Application\obj\Debug\net8.0\School.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\orlin.aguilar\source\repos\BackendPracticing\School\School.Application\obj\Debug\net8.0\School.Application.AssemblyInfoInputs.cache
+C:\Users\orlin.aguilar\source\repos\BackendPracticing\School\School.Application\obj\Debug\net8.0\School.Application.AssemblyInfo.cs
+C:\Users\orlin.aguilar\source\repos\BackendPracticing\School\School.Application\obj\Debug\net8.0\School.Application.csproj.CoreCompileInputs.cache
+C:\Users\orlin.aguilar\source\repos\BackendPracticing\School\School.Application\obj\Debug\net8.0\School.A.0288516A.Up2Date
+C:\Users\orlin.aguilar\source\repos\BackendPracticing\School\School.Application\obj\Debug\net8.0\School.Application.dll
+C:\Users\orlin.aguilar\source\repos\BackendPracticing\School\School.Application\obj\Debug\net8.0\refint\School.Application.dll
+C:\Users\orlin.aguilar\source\repos\BackendPracticing\School\School.Application\obj\Debug\net8.0\School.Application.pdb
+C:\Users\orlin.aguilar\source\repos\BackendPracticing\School\School.Application\obj\Debug\net8.0\ref\School.Application.dll
