@@ -6,6 +6,9 @@ using School.Application.Mappings;
 using School.Application.Services;
 using School.Domain.Interfaces;
 using School.Infrastructure.Persistence.Repository;
+//coneccion base de datos 
+using Microsoft.EntityFrameworkCore;
+using School.Infrastructure.Persistence.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +22,16 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddAutoMapper(typeof(MappingProfile));
 builder.Services.AddScoped<IPersonaRepository, PersonaRepository>();
 builder.Services.AddScoped<IPersonaService, PersonaService>();
+
+// 1. Extraer la cadena de conexión del archivo appsettings.json
+var connectionString = builder.Configuration.GetConnectionString("SupabaseConnection");
+
+builder.Services.AddDbContext<LocalDbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("LocalConnection")));
+
+// 2. Registrar el DbContext en el contenedor de servicios
+builder.Services.AddDbContext<RemoteDbContext>(options =>
+    options.UseNpgsql(connectionString));
 
 var app = builder.Build();
 

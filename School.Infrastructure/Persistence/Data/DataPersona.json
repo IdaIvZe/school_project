@@ -1,17 +1,17 @@
 [
   {
-    "Nombres": "Cliente 1",
-    "Apellidos": "string",
+    "Nombres": "Orlin ",
+    "Apellidos": "Aguilar Velasquez",
     "nombreUsuario": "oraguilar",
-    "password": "1234",
-    "FechanNacimiento": "string",
+    "password": "12345",
+    "FechanNacimiento": "2003",
     "Nacionalidad": 0,
-    "Direccion": "string",
-    "Telefono": "string",
-    "Email": "string",
+    "Direccion": "F.M",
+    "Telefono": "22556699",
+    "Email": "oa@gmail.com",
     "Estado": 0,
     "FechaCreacion": "0001-01-01T00:00:00",
     "FechaActualizacion": "0001-01-01T00:00:00",
-    "rol": "admin"
+    "rol": "student"
   }
 ]

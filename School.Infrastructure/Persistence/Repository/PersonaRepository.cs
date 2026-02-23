@@ -10,6 +10,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace School.Infrastructure.Persistence.Repository
 {
@@ -17,8 +18,11 @@ namespace School.Infrastructure.Persistence.Repository
     {
         public PersonaRepository() { }
 
-        string _fileDataPersona = "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School.Infrastructure\\Persistence\\Data\\DataPersona.json";
+       // string _fileDataPersona = "School.Infrastructure\\Persistence\\Data\\DataPersona.json";
 
+       string _fileDataPersona = Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..",
+                                        "School.Infrastructure", "Persistence", "Data", "DataPersona.json");
+       
         public async Task<Persona> crearPersona(Persona persona)
         {
             try
@@ -26,11 +30,12 @@ namespace School.Infrastructure.Persistence.Repository
 
                 List<Persona> personas;
                 var respuesta = new Respuesta<Persona>();
-
+                
+                 Console.WriteLine(_fileDataPersona);
                 //////////////////////////////
                 if (persona != null)
                 {
-                    if (File.Exists(_fileDataPersona))
+                    if (File.Exists($" aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa{_fileDataPersona}"))
                     {
                         string leerJson = await File.ReadAllTextAsync(_fileDataPersona);
                         personas = JsonSerializer.Deserialize<List<Persona>>(leerJson) ?? new List<Persona>();

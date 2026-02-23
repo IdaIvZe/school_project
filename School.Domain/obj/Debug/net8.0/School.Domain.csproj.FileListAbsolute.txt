@@ -9,3 +9,15 @@ C:\Users\orlin.aguilar\source\repos\BackendPracticing\School\School.Domain\obj\D
 C:\Users\orlin.aguilar\source\repos\BackendPracticing\School\School.Domain\obj\Debug\net8.0\refint\School.Domain.dll
 C:\Users\orlin.aguilar\source\repos\BackendPracticing\School\School.Domain\obj\Debug\net8.0\School.Domain.pdb
 C:\Users\orlin.aguilar\source\repos\BackendPracticing\School\School.Domain\obj\Debug\net8.0\ref\School.Domain.dll
+D:\Downloads-NUEVO\Sistemas_expertos_IPAC_2026\School_Proyect\School.Domain\bin\Debug\net8.0\School.Domain.deps.json
+D:\Downloads-NUEVO\Sistemas_expertos_IPAC_2026\School_Proyect\School.Domain\bin\Debug\net8.0\School.Domain.dll
+D:\Downloads-NUEVO\Sistemas_expertos_IPAC_2026\School_Proyect\School.Domain\bin\Debug\net8.0\School.Domain.pdb
+D:\Downloads-NUEVO\Sistemas_expertos_IPAC_2026\School_Proyect\School.Domain\obj\Debug\net8.0\School.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Downloads-NUEVO\Sistemas_expertos_IPAC_2026\School_Proyect\School.Domain\obj\Debug\net8.0\School.Domain.AssemblyInfoInputs.cache
+D:\Downloads-NUEVO\Sistemas_expertos_IPAC_2026\School_Proyect\School.Domain\obj\Debug\net8.0\School.Domain.AssemblyInfo.cs
+D:\Downloads-NUEVO\Sistemas_expertos_IPAC_2026\School_Proyect\School.Domain\obj\Debug\net8.0\School.Domain.csproj.CoreCompileInputs.cache
+D:\Downloads-NUEVO\Sistemas_expertos_IPAC_2026\School_Proyect\School.Domain\obj\Debug\net8.0\School.Domain.sourcelink.json
+D:\Downloads-NUEVO\Sistemas_expertos_IPAC_2026\School_Proyect\School.Domain\obj\Debug\net8.0\School.Domain.dll
+D:\Downloads-NUEVO\Sistemas_expertos_IPAC_2026\School_Proyect\School.Domain\obj\Debug\net8.0\refint\School.Domain.dll
+D:\Downloads-NUEVO\Sistemas_expertos_IPAC_2026\School_Proyect\School.Domain\obj\Debug\net8.0\School.Domain.pdb
+D:\Downloads-NUEVO\Sistemas_expertos_IPAC_2026\School_Proyect\School.Domain\obj\Debug\net8.0\ref\School.Domain.dll

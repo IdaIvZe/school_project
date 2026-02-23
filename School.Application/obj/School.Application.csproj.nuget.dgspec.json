@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School.Application\\School.Application.csproj": {}
+    "D:\\Downloads-NUEVO\\Sistemas_expertos_IPAC_2026\\School_Proyect\\School.Application\\School.Application.csproj": {}
   },
   "projects": {
-    "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School.Application\\School.Application.csproj": {
+    "D:\\Downloads-NUEVO\\Sistemas_expertos_IPAC_2026\\School_Proyect\\School.Application\\School.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School.Application\\School.Application.csproj",
+        "projectUniqueName": "D:\\Downloads-NUEVO\\Sistemas_expertos_IPAC_2026\\School_Proyect\\School.Application\\School.Application.csproj",
         "projectName": "School.Application",
-        "projectPath": "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School.Application\\School.Application.csproj",
-        "packagesPath": "C:\\Users\\orlin.aguilar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School.Application\\obj\\",
+        "projectPath": "D:\\Downloads-NUEVO\\Sistemas_expertos_IPAC_2026\\School_Proyect\\School.Application\\School.Application.csproj",
+        "packagesPath": "C:\\Users\\Velasquez\\.nuget\\packages\\",
+        "outputPath": "D:\\Downloads-NUEVO\\Sistemas_expertos_IPAC_2026\\School_Proyect\\School.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\orlin.aguilar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Velasquez\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,15 +26,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School.Domain\\School.Domain.csproj": {
-                "projectPath": "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School.Domain\\School.Domain.csproj"
+              "D:\\Downloads-NUEVO\\Sistemas_expertos_IPAC_2026\\School_Proyect\\School.Domain\\School.Domain.csproj": {
+                "projectPath": "D:\\Downloads-NUEVO\\Sistemas_expertos_IPAC_2026\\School_Proyect\\School.Domain\\School.Domain.csproj"
               }
             }
           }
@@ -80,20 +79,20 @@
         }
       }
     },
-    "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School.Domain\\School.Domain.csproj": {
+    "D:\\Downloads-NUEVO\\Sistemas_expertos_IPAC_2026\\School_Proyect\\School.Domain\\School.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School.Domain\\School.Domain.csproj",
+        "projectUniqueName": "D:\\Downloads-NUEVO\\Sistemas_expertos_IPAC_2026\\School_Proyect\\School.Domain\\School.Domain.csproj",
         "projectName": "School.Domain",
-        "projectPath": "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School.Domain\\School.Domain.csproj",
-        "packagesPath": "C:\\Users\\orlin.aguilar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School.Domain\\obj\\",
+        "projectPath": "D:\\Downloads-NUEVO\\Sistemas_expertos_IPAC_2026\\School_Proyect\\School.Domain\\School.Domain.csproj",
+        "packagesPath": "C:\\Users\\Velasquez\\.nuget\\packages\\",
+        "outputPath": "D:\\Downloads-NUEVO\\Sistemas_expertos_IPAC_2026\\School_Proyect\\School.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\orlin.aguilar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Velasquez\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -102,7 +101,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

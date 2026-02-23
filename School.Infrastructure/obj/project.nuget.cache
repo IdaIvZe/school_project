@@ -1,16 +1,27 @@
 {
   "version": 2,
-  "dgSpecHash": "f5XIPY5ZrCA=",
+  "dgSpecHash": "HvL70ixjS5s=",
   "success": true,
-  "projectFilePath": "C:\\Users\\orlin.aguilar\\source\\repos\\BackendPracticing\\School\\School.Infrastructure\\School.Infrastructure.csproj",
+  "projectFilePath": "D:\\Downloads-NUEVO\\Sistemas_expertos_IPAC_2026\\School_Proyect\\School.Infrastructure\\School.Infrastructure.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\orlin.aguilar\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
-    "C:\\Users\\orlin.aguilar\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
-    "C:\\Users\\orlin.aguilar\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
-    "C:\\Users\\orlin.aguilar\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
-    "C:\\Users\\orlin.aguilar\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
-    "C:\\Users\\orlin.aguilar\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
-    "C:\\Users\\orlin.aguilar\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    "C:\\Users\\Velasquez\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\Velasquez\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "C:\\Users\\Velasquez\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\Velasquez\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.11\\microsoft.entityframeworkcore.8.0.11.nupkg.sha512",
+    "C:\\Users\\Velasquez\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.11\\microsoft.entityframeworkcore.abstractions.8.0.11.nupkg.sha512",
+    "C:\\Users\\Velasquez\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\8.0.11\\microsoft.entityframeworkcore.analyzers.8.0.11.nupkg.sha512",
+    "C:\\Users\\Velasquez\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\8.0.11\\microsoft.entityframeworkcore.relational.8.0.11.nupkg.sha512",
+    "C:\\Users\\Velasquez\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\8.0.0\\microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Velasquez\\.nuget\\packages\\microsoft.extensions.caching.memory\\8.0.1\\microsoft.extensions.caching.memory.8.0.1.nupkg.sha512",
+    "C:\\Users\\Velasquez\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Velasquez\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.1\\microsoft.extensions.dependencyinjection.8.0.1.nupkg.sha512",
+    "C:\\Users\\Velasquez\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.2\\microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
+    "C:\\Users\\Velasquez\\.nuget\\packages\\microsoft.extensions.logging\\8.0.1\\microsoft.extensions.logging.8.0.1.nupkg.sha512",
+    "C:\\Users\\Velasquez\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.2\\microsoft.extensions.logging.abstractions.8.0.2.nupkg.sha512",
+    "C:\\Users\\Velasquez\\.nuget\\packages\\microsoft.extensions.options\\8.0.2\\microsoft.extensions.options.8.0.2.nupkg.sha512",
+    "C:\\Users\\Velasquez\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
+    "C:\\Users\\Velasquez\\.nuget\\packages\\npgsql\\8.0.6\\npgsql.8.0.6.nupkg.sha512",
+    "C:\\Users\\Velasquez\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\8.0.11\\npgsql.entityframeworkcore.postgresql.8.0.11.nupkg.sha512"
   ],
   "logs": []
 }
