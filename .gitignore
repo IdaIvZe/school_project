@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Visual Studio
 .vs/
 *.suo
@@ -15,3 +16,31 @@ obj/
 
 # Rider / IDE
 .idea/
+=======
+# Carpetas de compilación
+bin/
+obj/
+
+# Archivos de usuario
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Configuración de IDE
+.vs/
+.vscode/
+
+# Archivos de logs y temporales
+*.log
+*.tmp
+*.temp
+
+# Paquetes
+packages/
+*.nupkg
+
+# Archivos de publicación
+*.publish.xml
+*.deploy
+>>>>>>> 732d361e0eff3452c054f3f549384297f018450d

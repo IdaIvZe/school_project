@@ -1,0 +1,18 @@
+[
+  {
+    "Id": 0,
+    "Nombres": "Cliente 2",
+    "Apellidos": "troper",
+    "nombreUsuario": "tropClient",
+    "password": "123456",
+    "FechanNacimiento": "34 ty 45",
+    "Nacionalidad": 0,
+    "Direccion": "fortun nort west",
+    "Telefono": "string",
+    "Email": "string",
+    "Estado": 0,
+    "FechaCreacion": "0001-01-01T00:00:00",
+    "FechaActualizacion": "0001-01-01T00:00:00",
+    "rol": "client"
+  }
+]
