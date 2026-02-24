@@ -11,6 +11,7 @@ namespace School.Domain.Entities
     public class Persona
     {
         public int Id { get; set; } 
+        public Guid IdGlobal { get; set; }
         public string Nombres { get; set; } = string.Empty;
         public string Apellidos { get; set; } = string.Empty;
         public string nombreUsuario { get; set; } = string.Empty;
@@ -23,6 +24,7 @@ namespace School.Domain.Entities
         public EstadoPersona Estado { get; set; }
         public DateTime FechaCreacion { get; set; }
         public DateTime FechaActualizacion { get; set; }
+        public SyncStatus SyncStatus { get; set; }
         public string rol { get; set; } = string.Empty;
 
 

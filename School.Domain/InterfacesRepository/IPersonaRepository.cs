@@ -16,6 +16,15 @@ namespace School.Domain.Interfaces
 
         public Task<Persona> validarCredenciales(string password, string nombreUsuario);
 
+        public  Task AddAsync(Persona persona);
+
+        public  Task UpdateAsync(Persona persona);
+
+        public  Task DeleteAsync(int id);
+
+        public  Task<Persona> getByIdAsync(int id);
+
+        public Task<List<Persona>> getAllByPendingSyncAsync();
 
     }
 }

@@ -14,15 +14,19 @@ namespace School.Infrastructure.Persistence.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(LocalDbContext).Assembly);
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<Persona>(entity =>
-            {
-                entity.HasKey(p => p.Id);
-                entity.Property(p => p.Nombres)
-                      .IsRequired()
-                      .HasMaxLength(100);
-            });
+            //base.OnModelCreating(modelBuilder);
+            //
+            //modelBuilder.Entity<Persona>(entity =>
+            //{
+            //    entity.HasKey(p => p.Id);
+            //    entity.Property(p => p.Nombres)
+            //          .IsRequired()
+            //          .HasMaxLength(100);
+            //});
         }
     }
 }

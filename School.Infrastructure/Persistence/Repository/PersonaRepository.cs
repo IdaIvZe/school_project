@@ -2,6 +2,7 @@
 using School.Domain;
 using School.Domain.Entities;
 using School.Domain.Interfaces;
+using School.Domain.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,14 +12,63 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using System.IO;
+using School.Infrastructure.Persistence.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace School.Infrastructure.Persistence.Repository
 {
     public class PersonaRepository : IPersonaRepository
     {
-        public PersonaRepository() { }
+        private readonly LocalDbContext _context;
+        public PersonaRepository(LocalDbContext context) 
+        {
+            _context = context;
+        }
 
-       // string _fileDataPersona = "School.Infrastructure\\Persistence\\Data\\DataPersona.json";
+
+        public async Task AddAsync(Persona persona)
+        {
+            await _context.Personas.AddAsync(persona);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task UpdateAsync(Persona persona)
+        {
+            _context.Update(persona);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task  DeleteAsync(int id)
+        {
+            var persona = await _context.Personas.FindAsync(id);
+
+            if(persona != null)
+            {
+                _context.Personas.Remove(persona);
+                await _context.SaveChangesAsync();
+
+            }
+        }
+
+        public async Task<Persona> getByIdAsync(int id )
+        {
+
+            return await _context.Personas.FindAsync(id);
+
+        }
+
+        public async Task<List<Persona>> getAllByPendingSyncAsync()
+        {
+            return await _context.Personas.Where(p => p.SyncStatus == SyncStatus.PendingInsert).ToListAsync();
+        }
+
+
+
+
+
+        /// <summary>
+        /// /////////////////////
+        /// </summary>
 
        string _fileDataPersona = Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..",
                                         "School.Infrastructure", "Persistence", "Data", "DataPersona.json");
