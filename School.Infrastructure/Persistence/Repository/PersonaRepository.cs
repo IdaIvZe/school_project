@@ -14,23 +14,27 @@ using System.Threading.Tasks;
 using System.IO;
 using School.Infrastructure.Persistence.Data;
 using Microsoft.EntityFrameworkCore;
+using AutoMapper.QueryableExtensions;
 
 namespace School.Infrastructure.Persistence.Repository
 {
     public class PersonaRepository : IPersonaRepository
     {
         private readonly LocalDbContext _context;
-        public PersonaRepository(LocalDbContext context) 
+        public PersonaRepository(LocalDbContext context)
         {
             _context = context;
         }
 
 
-        public async Task AddAsync(Persona persona)
+        public async Task<Persona> AddAsync(Persona persona)
         {
             await _context.Personas.AddAsync(persona);
             await _context.SaveChangesAsync();
+
+            return persona;
         }
+
 
         public async Task UpdateAsync(Persona persona)
         {
@@ -38,24 +42,27 @@ namespace School.Infrastructure.Persistence.Repository
             await _context.SaveChangesAsync();
         }
 
-        public async Task  DeleteAsync(int id)
+
+        public async Task DeleteAsync(int id)
         {
             var persona = await _context.Personas.FindAsync(id);
 
-            if(persona != null)
+
+            if (persona != null)
             {
                 _context.Personas.Remove(persona);
                 await _context.SaveChangesAsync();
-
             }
+
         }
 
-        public async Task<Persona> getByIdAsync(int id )
+
+
+        public async Task<Persona> getByIdAsync(int id)
         {
-
             return await _context.Personas.FindAsync(id);
-
         }
+
 
         public async Task<List<Persona>> getAllByPendingSyncAsync()
         {
@@ -63,134 +70,54 @@ namespace School.Infrastructure.Persistence.Repository
         }
 
 
-
-
-
-        /// <summary>
-        /// /////////////////////
-        /// </summary>
-
-       string _fileDataPersona = Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..",
-                                        "School.Infrastructure", "Persistence", "Data", "DataPersona.json");
-       
-        public async Task<Persona> crearPersona(Persona persona)
+        public async Task<List<Persona>> getAllByRol(string rol)
         {
-            try
+            return await _context.Personas.Where(p => p.rol == rol).ToListAsync();
+        }
+
+
+        public async Task<bool> validateCredential( string userName, string password)
+        {
+           var user = await _context.Personas.AnyAsync(p => p.nombreUsuario == userName);
+
+            if (user)
             {
-
-                List<Persona> personas;
-                var respuesta = new Respuesta<Persona>();
-                
-                 Console.WriteLine(_fileDataPersona);
-                //////////////////////////////
-                if (persona != null)
-                {
-                    if (File.Exists($" aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa{_fileDataPersona}"))
-                    {
-                        string leerJson = await File.ReadAllTextAsync(_fileDataPersona);
-                        personas = JsonSerializer.Deserialize<List<Persona>>(leerJson) ?? new List<Persona>();
-                    }
-                    else
-                    {
-                        personas = new List<Persona>();
-                    }
-
-                    personas.Add(persona);
-
-                    string actualizarJson = JsonSerializer.Serialize(personas, new JsonSerializerOptions { WriteIndented = true } );
-
-                    await File.WriteAllTextAsync(_fileDataPersona, actualizarJson);
-
-                    return persona;
-                }
-                /////////////////////////////
-
-                throw new ArgumentNullException(nameof(persona), "El registro no puede instanciarce vacio");
-               
-                
-
+                return true;
             }
-            catch (Exception ex)
-            {
-                throw new InvalidOperationException($"No se pudo crear la persona, error tipo: {ex}");
-                
-            }
+            return false;
 
         }
 
 
-
-
-
-        public async Task<List<Persona>> obtenerPersonasPorRol(string rol)
+        public async Task<PersonaCredenciales> getCredential(string userName)
         {
-            try
-            {
+            PersonaCredenciales personCredential = new PersonaCredenciales();
 
-                List<Persona> personasRol;
-
-                if (File.Exists(_fileDataPersona))
+            var credential = await _context.Personas
+                .Where(p => p.nombreUsuario == userName)
+                .Select(p => new
                 {
-                    string leerJson = await File.ReadAllTextAsync(_fileDataPersona);
-
-                    personasRol = JsonSerializer.Deserialize<List<Persona>>(leerJson) ?? new List<Persona>();
-
-
-
-                    List<Persona> personasRolesEspecificos = personasRol.FindAll(persona => persona.rol == rol);
-
-                    return personasRolesEspecificos;
-                }
-
-                throw new ArgumentNullException($"Error de coneccion con archivo de datos");
-
-            }
-            catch (Exception ex)
-            {
-                throw new InvalidOperationException($"Fallo al momento de obtener usuarios con rol especifico; error tipo: {ex}");
-            }
-          
-        }
-
-
-
-        public async Task<Persona> validarCredenciales(string password, string username)
-        {
-            try
-            {
-
-                if (File.Exists(_fileDataPersona))
-                {
-
-                    string leerJson = await File.ReadAllTextAsync(_fileDataPersona);
-
-                    var usuarios = JsonSerializer.Deserialize<List<Persona>>(leerJson) ?? new List<Persona>();
-
-                    Persona existeUsuario = usuarios.Single(usuario => usuario.password == password);
-
-
-                    if ((existeUsuario != null) && (existeUsuario.password == password))
-                    {
-
-                        return existeUsuario;
-
-                    }
-
-                    throw new ArgumentNullException(nameof(username), "Credenciales no validas usuario no encontrado o contraseña incorrecta");
+                    nombreUsuario = p.nombreUsuario,
+                    password = p.password,
+                    nombres = p.Nombres,
+                    apellidos = p.Apellidos,
+                    rol = p.rol
 
                 }
+                ).FirstOrDefaultAsync();
 
-                throw new ArgumentNullException($"Error de coneccion con archivo de datos");
-            }
-            catch(Exception ex)
-            {
 
-                throw new InvalidDataException($"El password o usario incorrectos o no encontrado; error tipo: {ex}");
-               
-            }
+            personCredential.nombreUsuario = credential.nombreUsuario;
+            personCredential.password = credential.password;
+            personCredential.nombres = credential.nombres;
+            personCredential.apellidos = credential.apellidos;
+            personCredential.rol = credential.rol;
 
+
+            return personCredential;
+                     
         }
-    
-      
+     
+
     }
 }

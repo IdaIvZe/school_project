@@ -7,14 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Persistence\Data\DataPersona.json" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="Persistence\Data\DataPersona.json" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\School.Application\School.Application.csproj" />
     <ProjectReference Include="..\School.Domain\School.Domain.csproj" />
     

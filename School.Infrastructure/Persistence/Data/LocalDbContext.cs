@@ -1,5 +1,9 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Conventions;
 using School.Domain.Entities;
+using System.Security.Cryptography.X509Certificates;
+using School.Domain.Enums;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 namespace School.Infrastructure.Persistence.Data
 {
@@ -8,6 +12,8 @@ namespace School.Infrastructure.Persistence.Data
         public LocalDbContext(DbContextOptions<LocalDbContext> options)
             : base(options)
         {
+            // Esto le dice a EF: "Si la tabla no existe, créala ahora mismo"
+            this.Database.EnsureCreated();
         }
 
         public DbSet<Persona> Personas { get; set; }
@@ -18,15 +24,24 @@ namespace School.Infrastructure.Persistence.Data
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(LocalDbContext).Assembly);
             base.OnModelCreating(modelBuilder);
 
-            //base.OnModelCreating(modelBuilder);
-            //
-            //modelBuilder.Entity<Persona>(entity =>
-            //{
-            //    entity.HasKey(p => p.Id);
-            //    entity.Property(p => p.Nombres)
-            //          .IsRequired()
-            //          .HasMaxLength(100);
-            //});
+        }
+        public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
+        {
+            foreach (EntityEntry entry in ChangeTracker.Entries())
+            {
+
+                if (entry.Entity is Persona persona)
+                {
+                    if (entry.State == EntityState.Added || entry.State == EntityState.Modified)
+                    {
+                        persona.SyncStatus = SyncStatus.Pending;
+                    }
+                }
+
+            }
+
+            return await base.SaveChangesAsync(cancellationToken);
+
+            }
         }
     }
-}

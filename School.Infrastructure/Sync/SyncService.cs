@@ -31,8 +31,21 @@ namespace School.Infrastructure.Sync
                 try
                 {
 
-                    //logica para actualizacoines con supabase
+                    ////logica para actualizacoines con supabase
+                    //         var response = await _httpClient.PostAsJsonAsync(
+                    //                              "https://TU-PROYECTO.supabase.co/rest/v1/personas",
+                    //                              persona
+                    //                              );
 
+                    // response.EnsureSuccessStatusCode();
+
+                    /*Configuración que te falta (seguro)
+                        
+                        Antes de eso necesitas:
+                        
+                        _httpClient.DefaultRequestHeaders.Add("apikey", "TU_API_KEY");
+                        _httpClient.DefaultRequestHeaders.Add("Authorization", "Bearer TU_API_KEY");*/
+                        
                     persona.SyncStatus = SyncStatus.Synced;
                    
                     await _personaRepository.UpdateAsync(persona);

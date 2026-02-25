@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Microsoft.EntityFrameworkCore.ValueGeneration;
 using School.Domain.Entities;
 
 namespace School.Infrastructure.Persistence.Configurations
@@ -17,6 +18,8 @@ namespace School.Infrastructure.Persistence.Configurations
 
             builder.HasKey(p => p.Id);
 
+            builder.Property(p => p.IdGlobal).IsRequired().ValueGeneratedOnAdd().HasValueGenerator<GuidValueGenerator>();
+
             builder.Property(p => p.Id).ValueGeneratedOnAdd();
 
             builder.Property(p => p.Nombres).IsRequired().HasMaxLength(100);
@@ -27,7 +30,7 @@ namespace School.Infrastructure.Persistence.Configurations
 
             builder.Property(p => p.FechaActualizacion).HasDefaultValueSql("NOW()");
 
-            builder.Property(p => p.SyncStatus).HasDefaultValue(Domain.Enums.SyncStatus.Pending);
+           // builder.Property(p => p.SyncStatus).HasDefaultValue(Domain.Enums.SyncStatus.Pending);
 
 
         }
