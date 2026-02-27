@@ -12,7 +12,8 @@ namespace School.Domain.Enums
         PendingInsert,
         PendingUpdate,
         PendingDelete,
-        Synced
+        Synced, 
+        Conflict
 
     }
 }

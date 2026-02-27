@@ -3,6 +3,7 @@ using School.Domain;
 using School.Domain.Entities;
 using School.Domain.Interfaces;
 using School.Domain.Enums;
+using AutoMapper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,15 +16,18 @@ using System.IO;
 using School.Infrastructure.Persistence.Data;
 using Microsoft.EntityFrameworkCore;
 using AutoMapper.QueryableExtensions;
+using School.Application.DTOs;
 
 namespace School.Infrastructure.Persistence.Repository
 {
-    public class PersonaRepository : IPersonaRepository
+    public class PersonaRepository: IPersonaRepository
     {
         private readonly LocalDbContext _context;
-        public PersonaRepository(LocalDbContext context)
+        private readonly IMapper _mapper;
+        public PersonaRepository(LocalDbContext context, IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
 
 
@@ -36,10 +40,26 @@ namespace School.Infrastructure.Persistence.Repository
         }
 
 
-        public async Task UpdateAsync(Persona persona)
+        public async Task<Persona> UpdateAsync(int id, Persona persona)
         {
-            _context.Update(persona);
+            var objPersona = await _context.Personas.FindAsync(id);
+
+            if (objPersona == null) throw new BusinessException("Perrsona no encontrada");
+
+            objPersona.Nombres   =   persona.Nombres;
+            objPersona.Apellidos =   persona.Apellidos;
+            objPersona.Direccion =   persona.Direccion;
+            objPersona.Telefono  =   persona.Telefono;
+            objPersona.nombreUsuario =   persona.nombreUsuario;
+            objPersona.Email     =   persona.Email;
+            objPersona.Estado    =   persona.Estado;
+            objPersona.FechaActualizacion =   persona.FechaActualizacion;
+            objPersona.SyncStatus    =   persona.SyncStatus;
+            objPersona.rol       = persona.rol;
+
             await _context.SaveChangesAsync();
+
+            return objPersona;
         }
 
 
@@ -78,13 +98,9 @@ namespace School.Infrastructure.Persistence.Repository
 
         public async Task<bool> validateCredential( string userName, string password)
         {
-           var user = await _context.Personas.AnyAsync(p => p.nombreUsuario == userName);
+           var user = await _context.Personas.AnyAsync(p => p.nombreUsuario == userName && p.password == password);
 
-            if (user)
-            {
-                return true;
-            }
-            return false;
+            return user;
 
         }
 

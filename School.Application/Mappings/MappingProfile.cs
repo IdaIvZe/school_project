@@ -5,12 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
 using School.Application.DTOs;
+using School.Application.Services;
 using School.Domain.Entities;
 
 
 namespace School.Application.Mappings
 {
-    public class MappingProfile: Profile
+    public class MappingProfile : Profile
     {
 
 
@@ -21,14 +22,17 @@ namespace School.Application.Mappings
             CreateMap<PersonaDto, Persona>();
 
             CreateMap<PersonaPorRolDto, Persona>();
-            CreateMap< Persona, PersonaPorRolDto>();
+            CreateMap<Persona, PersonaPorRolDto>();
 
-            CreateMap<PersonaCredencialesDto, Persona>();
+            CreateMap<PersonaCredenciales, PersonaCredencialesDto>();
+            CreateMap<PersonaCredencialesDto, PersonaCredenciales>();
 
+            CreateMap<Persona, PersonUpdateDto>();
+            CreateMap<PersonUpdateDto, Persona>();
 
         }
 
     }
 
-       
+
 }

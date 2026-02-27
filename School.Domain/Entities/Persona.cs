@@ -1,4 +1,5 @@
 ﻿using School.Domain.Enums;
+using School.Domain.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace School.Domain.Entities
 {
-    public class Persona
+    public class Persona: ISyncable
     {
         public int Id { get; set; } 
         public Guid IdGlobal { get; set; }
@@ -24,10 +25,10 @@ namespace School.Domain.Entities
         public EstadoPersona Estado { get; set; }
         public DateTime FechaCreacion { get; set; }
         public DateTime FechaActualizacion { get; set; }
-        public SyncStatus SyncStatus { get; set; }
         public string rol { get; set; } = string.Empty;
-
-
+        public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;//TimeZoneInfo.ConvertTime(DateTime.UtcNow, TimeZoneInfo.FindSystemTimeZoneById("Central America Standard Time"));
+        public bool IsDeleted {get; set;} = false;
+        public SyncStatus SyncStatus { get; set; } = SyncStatus.Pending;
 
     }
 }

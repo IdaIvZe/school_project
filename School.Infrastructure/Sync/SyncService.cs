@@ -48,7 +48,7 @@ namespace School.Infrastructure.Sync
                         
                     persona.SyncStatus = SyncStatus.Synced;
                    
-                    await _personaRepository.UpdateAsync(persona);
+                  //  await _personaRepository.UpdateAsync(id,persona);
 
                 }
                 catch(Exception ex)
