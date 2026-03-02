@@ -17,7 +17,7 @@ namespace School.Infrastructure.Persistence.Data
         }
 
         public DbSet<Persona> Personas { get; set; }
-       // public DbSet<SyncLog> SyncLog { get; set; }
+        public DbSet<SyncLog> SyncLog { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -17,6 +17,7 @@ using School.Infrastructure.Persistence.Data;
 using Microsoft.EntityFrameworkCore;
 using AutoMapper.QueryableExtensions;
 using School.Application.DTOs;
+using Microsoft.IdentityModel.Tokens;
 
 namespace School.Infrastructure.Persistence.Repository
 {
@@ -46,16 +47,30 @@ namespace School.Infrastructure.Persistence.Repository
 
             if (objPersona == null) throw new BusinessException("Perrsona no encontrada");
 
+            if(!persona.Nombres.IsNullOrEmpty())
             objPersona.Nombres   =   persona.Nombres;
-            objPersona.Apellidos =   persona.Apellidos;
-            objPersona.Direccion =   persona.Direccion;
-            objPersona.Telefono  =   persona.Telefono;
-            objPersona.nombreUsuario =   persona.nombreUsuario;
-            objPersona.Email     =   persona.Email;
-            objPersona.Estado    =   persona.Estado;
-            objPersona.FechaActualizacion =   persona.FechaActualizacion;
-            objPersona.SyncStatus    =   persona.SyncStatus;
-            objPersona.rol       = persona.rol;
+
+            if (!persona.Apellidos.IsNullOrEmpty())
+                objPersona.Apellidos =   persona.Apellidos;
+
+            if (!persona.Direccion.IsNullOrEmpty())
+                objPersona.Direccion =   persona.Direccion;
+
+            if (!persona.Telefono.IsNullOrEmpty())
+                objPersona.Telefono  =   persona.Telefono;
+
+            if (!persona.nombreUsuario.IsNullOrEmpty())
+                objPersona.nombreUsuario =   persona.nombreUsuario;
+
+            if (!persona.Email.IsNullOrEmpty())
+                objPersona.Email     =   persona.Email;
+
+                objPersona.Estado    =   persona.Estado;
+                objPersona.FechaActualizacion =  DateTime.UtcNow;
+                objPersona.SyncStatus    =   SyncStatus.Pending;
+
+            if (!persona.rol.IsNullOrEmpty())
+                objPersona.rol       = persona.rol;
 
             await _context.SaveChangesAsync();
 
