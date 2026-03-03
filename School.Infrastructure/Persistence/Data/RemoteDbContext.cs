@@ -22,7 +22,7 @@ namespace School.Infrastructure.Persistence.Data
         {
             var optionsBuilder = new DbContextOptionsBuilder<RemoteDbContext>();
             // Usamos la cadena que me pasaste
-            optionsBuilder.UseNpgsql("Host=db.uodbkwhehesbpwdgbejd.supabase.co;Database=postgres;Username=postgres;Password=gl%8#bm/KUACy4C;SSL Mode=Require;Trust Server Certificate=true");
+            optionsBuilder.UseNpgsql("User Id=postgres.uodbkwhehesbpwdgbejd;Password=RusiaM0scu2o3o...;Server=aws-0-us-west-2.pooler.supabase.com;Port=6543;Database=postgres");
 
             return new RemoteDbContext(optionsBuilder.Options);
         }

@@ -12,17 +12,19 @@ namespace School.Infrastructure.Service
     {
 
         private readonly LocalDbContext _context;
+        private readonly RemoteDbContext _remoteContext;
 
-        public DataBaseConnectionTester(LocalDbContext context)
+        public DataBaseConnectionTester(LocalDbContext context, RemoteDbContext remoteContext)
         {
             _context = context;
+            _remoteContext = remoteContext;
         }
 
         public  async Task<bool> TestConnectionAsync()
         {
             try
             {
-                return await _context.Database.CanConnectAsync();
+                return await _remoteContext.Database.CanConnectAsync();
             }
             catch (Exception ex) 
             {

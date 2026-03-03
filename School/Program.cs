@@ -38,7 +38,7 @@ builder.Services.AddScoped(typeof(SyncRepository<>));
 
 //builder.Services.AddDbContext<LocalDbContext>(options => options.UseNpgsql(builder.Configuration.GetConnectionString("LocalConnection")));
 
-var connectionString = builder.Configuration.GetConnectionString("supabaseConnection");
+var connectionString = builder.Configuration.GetConnectionString("SupabaseConnection");
 // 2. Registrar el DbContext en el contenedor de servicios
 builder.Services.AddDbContext<RemoteDbContext>(options => options.UseNpgsql(connectionString));
 
