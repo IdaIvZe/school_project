@@ -1,4 +1,4 @@
-﻿//using Microsoft.Extensions.Hosting;
+﻿using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using School.Application.Services;
 using School.Domain.Entities;
@@ -12,5 +12,6 @@ namespace School.Infrastructure.Background
 {
     public class SyncWorker
     {
+
     }
 }

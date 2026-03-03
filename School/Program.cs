@@ -3,7 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Any;
 using School.Application.InterfacesService;
 using School.Infrastructure.Service;
-
+using Supabase;
 using School.Application.Mappings;
 //using School.Infrastructure.MappingsRepository;
 using School.Application.Services;

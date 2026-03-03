@@ -5,38 +5,48 @@ using System.Text;
 using System.Threading.Tasks;
 using School.Domain.Enums;
 using School.Domain.Interfaces;
+using School.Domain.InterfacesRepository;
 
 namespace School.Application.Services
 {
-    public  class SyncService<T> where T : class, ISyncable
+    public class SyncService<T> where T : class, ISyncable
     {
-        //private readonly IRepository<T> _localRepo;
-        //private readonly ISupabaseCliente _supabase;
+        
+        private readonly ISyncRepository<T> _localRepo;
+        private readonly ISyncRepository<T> _cloudRepo;
 
-        //public async Task Syncronize()
-        //{
-        //    var lastSync = GetLastSyncDate();
-        //    var cloudChanges = await _supabase.From<T>().Where(x => x.UpdateAt > lastSync).Get();
+        public SyncService(ISyncRepository<T> localRepo, ISyncRepository<T> cloudRepo)
+        {
+            _localRepo = localRepo;
+            _cloudRepo = cloudRepo;
+        }
 
-        //    //Pull: obtenr los cambios en la nube
-        //    foreach (var item in cloudChanges)
-        //    {
-        //        var local = await _localRepo.GetById(item.Id);
-        //        if (local == null || item.UpdatedAt > local.UpdateAt)
-        //        {
-        //            await _localRepo.UpdatedAt(item); // crea o actualiza en local
-        //        }   
-        //    }
+        public async Task Synchronize(string tableName)
+        {
+            //1. PULL (SUPABASE -> LOCAL)
+            var lastSyc = await _localRepo.GetLastSyncDateAsync(tableName);
+            var cloudChanges = await _cloudRepo.GetPendingLocalAsync();
 
-        //    //Push: Evitar cambios locales en la nube
-        //    var pendingLocal = await _localRepo.Where(x => x.Status == SyncStatus.Pending);
-        //    foreach (var item in pendingLocal)
-        //    {
-        //        item.Status = SyncStatus.Synced;
-        //        await _supabase.From<T>().Upsert(item);
-        //        await _localRepo.Update(item);
-        //    }
-        //}
+            foreach (var item in cloudChanges)
+            {
+                await _localRepo.UpertAsync(item);
+            }
+
+
+
+            //2. PUSH (Local -> Supabase)
+            var pendingLocal = await _localRepo.GetPendingLocalAsync();
+            foreach ( var item in pendingLocal) 
+            {
+                item.SyncStatus = SyncStatus.Pending;
+
+                await _cloudRepo.UpertAsync(item);
+                await _localRepo.UpertAsync(item);
+            }
+
+            await _localRepo.UpdateSyncLogAsync(tableName, DateTime.UtcNow);
+
+        }
 
     }
 }

@@ -13,7 +13,7 @@ namespace School.Domain.Entities
 
         [Key]
         public string TableName { get; set; }  // Ejemplo: "Persona"
-            public DateTime LastSyncDate { get; set; }
+        public DateTime LastSyncDate { get; set; }
         
 
     }
