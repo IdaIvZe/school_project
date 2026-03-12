@@ -8,10 +8,10 @@ namespace School.Domain.Entities
 {
     public class PersonaCredenciales
     {
-        public string nombreUsuario { get; set; } = string.Empty;
-        public string password { get; set; } = string.Empty;
-        public string nombres { get; set; } = string.Empty;
-        public string apellidos { get; set; } = string.Empty;
-        public string rol { get; set; } = string.Empty;
+        public string NombreUsuario { get; set; } = string.Empty;
+        public string Password { get; set; } = string.Empty;
+        public string Nombres { get; set; } = string.Empty;
+        public string Apellidos { get; set; } = string.Empty;
+        public string Rol { get; set; } = string.Empty;
     }
 }

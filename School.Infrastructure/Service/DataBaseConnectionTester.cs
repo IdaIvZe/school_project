@@ -24,7 +24,7 @@ namespace School.Infrastructure.Service
         {
             try
             {
-                return await _remoteContext.Database.CanConnectAsync();
+                return await _context.Database.CanConnectAsync();
             }
             catch (Exception ex) 
             {

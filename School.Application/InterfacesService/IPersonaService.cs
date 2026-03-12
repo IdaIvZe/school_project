@@ -14,12 +14,14 @@ namespace School.Application.InterfacesService
     public interface IPersonaService
     {
 
-        Task<Persona> crearpersona(PersonaDto dtoPersona);
+        Task<Persona> Crearpersona(PersonaDto dtoPersona);
 
-        Task<List<PersonaPorRolDto>> getPersonsByRol(string rol);
+        Task<List<PersonaPorRolDto>> GetPersonsByRol(string rol);
 
-        Task<PersonaCredenciales> getCredential( LoginDto loginData);
+        Task<PersonaCredenciales> GetCredential( LoginDto loginData);
 
-        Task<Persona> updatePersona(int id, PersonUpdateDto objpersonUpdate);
+        Task<Persona> UpdatePersona(int id, PersonUpdateDto objpersonUpdate);
+
+        Task<PersonUpdateDto> GetByIdAsync(int id);
     }
 }

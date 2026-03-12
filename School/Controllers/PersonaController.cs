@@ -27,10 +27,10 @@ namespace School.Api.Controllers
 
 
         [HttpPost("/registrar")]
-        public async Task<ActionResult<PersonaDto>> crearPersona([FromBody] PersonaDto dtoPersona)
+        public async Task<ActionResult<PersonaDto>> CrearPersona([FromBody] PersonaDto dtoPersona)
         {
 
-            var obj = await _personService.crearpersona(dtoPersona);
+            var obj = await _personService.Crearpersona(dtoPersona);
 
            
 
@@ -40,10 +40,10 @@ namespace School.Api.Controllers
 
 
         [HttpGet("/personas/rol/{rol}")]
-        public async Task<ActionResult<ApiResponseDto<List<PersonaDto>>>> obtenerPersonasPorRol( string rol)
+        public async Task<ActionResult<ApiResponseDto<List<PersonaDto>>>> ObtenerPersonasPorRol( string rol)
         {
 
-           var personasRol = await _personService.getPersonsByRol(rol);
+           var personasRol = await _personService.GetPersonsByRol(rol);
 
             var response = new ApiResponseDto<List<PersonaPorRolDto>>
             {
@@ -60,19 +60,27 @@ namespace School.Api.Controllers
 
 
         [HttpPost("/login")]
-        public async Task<ActionResult> validarCredencaialesUsuario([FromBody] LoginDto loginData)
+        public async Task<ActionResult> ValidarCredencaialesUsuario([FromBody] LoginDto loginData)
         {
-            var credencialesUsuario = await _personService.getCredential( loginData);
+            var credencialesUsuario = await _personService.GetCredential( loginData);
 
             return Ok(credencialesUsuario);
         }
 
-        [HttpPatch("/update")]
-        public async Task<ActionResult> updatePerson(int id, PersonUpdateDto personUpdate)
+        [HttpPatch("/update/{id}")]
+        public async Task<ActionResult> UpdatePerson(int id, PersonUpdateDto personUpdate)
         {
-            var personUpdated = await _personService.updatePersona(id, personUpdate);
+            var personUpdated = await _personService.UpdatePersona(id, personUpdate);
 
             return Ok(personUpdated);
+        }
+
+        [HttpGet("/persona/{id}")]
+        public async Task<ActionResult> GetPersonaById(int id)
+        {
+            PersonUpdateDto persona = await _personService.GetByIdAsync(id);
+
+            return Ok(persona);
         }
     }
 }

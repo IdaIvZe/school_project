@@ -11,13 +11,13 @@ namespace School.Application.DTOs
     {
         public string Nombres { get; set; } = string.Empty;
         public string Apellidos { get; set; } = string.Empty;
-        public string nombreUsuario { get; set; } = string.Empty;
+        public string NombreUsuario { get; set; } = string.Empty;
         public string Direccion { get; set; } = string.Empty;
         public string Telefono { get; set; } = string.Empty;
         public string Email { get; set; } = string.Empty;
         public EstadoPersona Estado { get; set; }
-        public DateTime FechaActualizacion { get; set; }
-        public SyncStatus SyncStatus { get; set; }
-        public string rol { get; set; } = string.Empty;
+        public DateTime FechaActualizacion { get; set; } 
+        public SyncStatus SyncStatus { get; set; } 
+        public string Rol { get; set; } = string.Empty;
     }
 }

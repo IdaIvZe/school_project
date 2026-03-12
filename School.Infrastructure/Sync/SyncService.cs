@@ -23,7 +23,7 @@ namespace School.Infrastructure.Sync
 
        public async Task SyncPendingAsync()
         {
-            var pendigPersonas = await _personaRepository.getAllByPendingSyncAsync();
+            var pendigPersonas = await _personaRepository.GetAllByPendingSyncAsync();
 
 
             foreach(var persona in pendigPersonas)

@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using School.Infrastructure.Persistence.Data;
@@ -11,9 +12,11 @@ using School.Infrastructure.Persistence.Data;
 namespace School.Infrastructure.Migrations.LocalDb
 {
     [DbContext(typeof(LocalDbContext))]
-    partial class LocalDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260312152929_AddSyncFields")]
+    partial class AddSyncFields
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -55,7 +58,7 @@ namespace School.Infrastructure.Migrations.LocalDb
                         .HasColumnType("timestamp with time zone")
                         .HasDefaultValueSql("NOW()");
 
-                    b.Property<string>("FechaNacimiento")
+                    b.Property<string>("FechanNacimiento")
                         .IsRequired()
                         .HasColumnType("text");
 
@@ -99,29 +102,6 @@ namespace School.Infrastructure.Migrations.LocalDb
                     b.HasKey("Id");
 
                     b.ToTable("Persona", (string)null);
-                });
-
-            modelBuilder.Entity("School.Domain.Entities.Roles", b =>
-                {
-                    b.Property<int>("IdRol")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("IdRol"));
-
-                    b.Property<string>("CodigoRol")
-                        .HasColumnType("text");
-
-                    b.Property<string>("DescripcionRol")
-                        .HasColumnType("text");
-
-                    b.Property<string>("NombreRol")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("IdRol");
-
-                    b.ToTable("Roles", (string)null);
                 });
 
             modelBuilder.Entity("School.Domain.Entities.SyncLog", b =>

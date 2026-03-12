@@ -16,9 +16,9 @@ namespace School.Domain.Interfaces
     public interface IPersonaRepository : IRepository<Persona>
     {
        
-        public Task<bool> validateCredential(string userName, string password);
+        public Task<bool> ValidateCredential(string userName, string password);
 
-        public Task<PersonaCredenciales> getCredential(string userName);
+        public Task<PersonaCredenciales> GetCredential(string userName);
 
         public Task<Persona> AddAsync(Persona persona);
 
@@ -26,11 +26,11 @@ namespace School.Domain.Interfaces
 
         public Task DeleteAsync(int id);
 
-        public Task<Persona> getByIdAsync(int id);
+        public Task<Persona> GetByIdAsync(int id);
 
-        public Task<List<Persona>> getAllByPendingSyncAsync();
+        public Task<List<Persona>> GetAllByPendingSyncAsync();
 
-        public Task<List<Persona>> getAllByRol(string rol);
+        public Task<List<Persona>> GetAllByRol(string rol);
 
     }
 }

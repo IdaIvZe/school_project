@@ -9,11 +9,11 @@ namespace School.Application.DTOs
 {
     public class PersonaCredencialesDto
     {
-        public string nombreUsuario { get; set; } = string.Empty;
-        public string password { get; set; } = string.Empty;
+        public string NombreUsuario { get; set; } = string.Empty;
+        public string Password { get; set; } = string.Empty;
         public string Nombres { get; set; } = string.Empty;
         public string Apellidos { get; set; } = string.Empty;
-        public string rol { get; set; } = string.Empty;
+        public string Rol { get; set; } = string.Empty;
 
     }
 }

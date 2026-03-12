@@ -20,7 +20,7 @@ namespace School.Application.Services
     {
 
 
-       public async Task<Persona> crearpersona(PersonaDto dtoPersona)
+       public async Task<Persona> Crearpersona(PersonaDto dtoPersona)
         {
 
             var persona = mapper.Map<Persona>(dtoPersona);
@@ -30,9 +30,9 @@ namespace School.Application.Services
         }
 
 
-        public async Task<List<PersonaPorRolDto>> getPersonsByRol(string rol)
+        public async Task<List<PersonaPorRolDto>> GetPersonsByRol(string rol)
         {  
-            var obtenerPersonas = await personaRepository.getAllByRol(rol);
+            var obtenerPersonas = await personaRepository.GetAllByRol(rol);
 
             List<PersonaPorRolDto> personasRol = new List<PersonaPorRolDto>();
 
@@ -50,21 +50,21 @@ namespace School.Application.Services
 
 
 
-        public async Task<PersonaCredenciales> getCredential(LoginDto loginData)
+        public async Task<PersonaCredenciales> GetCredential(LoginDto loginData)
         {
             //try
             //{
-                if(string.IsNullOrEmpty(loginData.password) && string.IsNullOrEmpty(loginData.userName))
+                if(string.IsNullOrEmpty(loginData.Password) && string.IsNullOrEmpty(loginData.UserName))
                 {
                     return null;
                 }
 
-                bool isAuthorized = await personaRepository.validateCredential( loginData.userName, loginData.password);
+                bool isAuthorized = await personaRepository.ValidateCredential( loginData.UserName, loginData.Password);
 
 
                 if (isAuthorized)
                 {
-                    return await personaRepository.getCredential(loginData.userName);
+                    return await personaRepository.GetCredential(loginData.UserName);
                 }
 
                 return null;
@@ -79,13 +79,22 @@ namespace School.Application.Services
         }
 
 
-       public async Task<Persona> updatePersona(int id, PersonUpdateDto objpersonUpdate)
+       public async Task<Persona> UpdatePersona(int id, PersonUpdateDto objpersonUpdate)
         {
 
             var personaUpdate = mapper.Map<Persona>(objpersonUpdate);
             await personaRepository.UpdateAsync(id, personaUpdate);
 
             return personaUpdate;
+        }
+
+        public async Task<PersonUpdateDto> GetByIdAsync(int id)
+        {
+
+            var persona = mapper.Map<PersonUpdateDto>(await personaRepository.GetByIdAsync(id));
+            return persona;
+
+           
         }
     }
 

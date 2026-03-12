@@ -59,8 +59,8 @@ namespace School.Infrastructure.Persistence.Repository
             if (!persona.Telefono.IsNullOrEmpty())
                 objPersona.Telefono  =   persona.Telefono;
 
-            if (!persona.nombreUsuario.IsNullOrEmpty())
-                objPersona.nombreUsuario =   persona.nombreUsuario;
+            if (!persona.NombreUsuario.IsNullOrEmpty())
+                objPersona.NombreUsuario =   persona.NombreUsuario;
 
             if (!persona.Email.IsNullOrEmpty())
                 objPersona.Email     =   persona.Email;
@@ -69,8 +69,8 @@ namespace School.Infrastructure.Persistence.Repository
                 objPersona.FechaActualizacion =  DateTime.UtcNow;
                 objPersona.SyncStatus    =   SyncStatus.Pending;
 
-            if (!persona.rol.IsNullOrEmpty())
-                objPersona.rol       = persona.rol;
+            if (!persona.Rol.IsNullOrEmpty())
+                objPersona.Rol       = persona.Rol;
 
             await _context.SaveChangesAsync();
 
@@ -93,61 +93,69 @@ namespace School.Infrastructure.Persistence.Repository
 
 
 
-        public async Task<Persona> getByIdAsync(int id)
+        public async Task<Persona> GetByIdAsync(int id)
         {
             return await _context.Personas.FindAsync(id);
         }
 
 
-        public async Task<List<Persona>> getAllByPendingSyncAsync()
+        public async Task<List<Persona>> GetAllByPendingSyncAsync()
         {
             return await _context.Personas.Where(p => p.SyncStatus == SyncStatus.PendingInsert).ToListAsync();
         }
 
 
-        public async Task<List<Persona>> getAllByRol(string rol)
+        public async Task<List<Persona>> GetAllByRol(string rol)
         {
-            return await _context.Personas.Where(p => p.rol == rol).ToListAsync();
+            return await _context.Personas.Where(p => p.Rol == rol).ToListAsync();
         }
 
 
-        public async Task<bool> validateCredential( string userName, string password)
+        public async Task<bool> ValidateCredential( string userName, string password)
         {
-           var user = await _context.Personas.AnyAsync(p => p.nombreUsuario == userName && p.password == password);
+           var user = await _context.Personas.AnyAsync(p => p.NombreUsuario == userName && p.Password == password);
 
             return user;
 
         }
 
 
-        public async Task<PersonaCredenciales> getCredential(string userName)
+        public async Task<PersonaCredenciales> GetCredential(string userName)
         {
             PersonaCredenciales personCredential = new PersonaCredenciales();
 
             var credential = await _context.Personas
-                .Where(p => p.nombreUsuario == userName)
+                .Where(p => p.NombreUsuario == userName)
                 .Select(p => new
                 {
-                    nombreUsuario = p.nombreUsuario,
-                    password = p.password,
-                    nombres = p.Nombres,
-                    apellidos = p.Apellidos,
-                    rol = p.rol
+                    NombreUsuario = p.NombreUsuario,
+                    Password = p.Password,
+                    Nombres = p.Nombres,
+                    Apellidos = p.Apellidos,
+                    Rol = p.Rol
 
                 }
                 ).FirstOrDefaultAsync();
 
 
-            personCredential.nombreUsuario = credential.nombreUsuario;
-            personCredential.password = credential.password;
-            personCredential.nombres = credential.nombres;
-            personCredential.apellidos = credential.apellidos;
-            personCredential.rol = credential.rol;
+            personCredential.NombreUsuario = credential.NombreUsuario;
+            personCredential.Password = credential.Password;
+            personCredential.Nombres = credential.Nombres;
+            personCredential.Apellidos = credential.Apellidos;
+            personCredential.Rol = credential.Rol;
 
 
             return personCredential;
                      
         }
+
+
+        //public async  Task<Persona> GetPersonById(int idPersona)
+        //{
+
+        //    await _context.Personas.ejre;
+
+        //}
      
 
     }

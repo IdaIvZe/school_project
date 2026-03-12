@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace School.Application.DTOs
 {
-    public  class LoginDto
+    public class RolesDto
     {
-
-        public string? UserName { get; set; }
-
-        public string? Password { get; set; }
+        public int IdRol { get; set; }
+        public string? NombreRol { get; set; }
+        public string? CodigoRol { get; set; }
     }
 }

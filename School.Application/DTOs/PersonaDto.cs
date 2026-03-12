@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace School.Application.DTOs
@@ -11,14 +12,16 @@ namespace School.Application.DTOs
     {
         public string Nombres { get; set; } = string.Empty;
         public string Apellidos { get; set; } = string.Empty;
-        public string nombreUsuario { get; set; } = string.Empty;
-        public string password { get; set; } = string.Empty;
-        public string FechanNacimiento { get; set; } = string.Empty;
+        public string NombreUsuario { get; set; } = string.Empty;
+        public string Password { get; set; } = string.Empty;
+        
+        public string FechaNacimiento { get; set; } = string.Empty;
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public Nacionalidades Nacionalidad { get; set; }
         public string Direccion { get; set; } = string.Empty;
         public string Telefono { get; set; } = string.Empty;
         public string Email { get; set; } = string.Empty;
         public EstadoPersona Estado { get; set; }
-        public string rol { get; set; } = string.Empty;
+        public string Rol { get; set; } = string.Empty;
     }
 }

@@ -13,9 +13,11 @@ using School.Infrastructure.Persistence.Data;
 using School.Infrastructure.Sync;
 using School.Api.ExtensionsTest;
 
+
 //coneccion base de datos 
 using Microsoft.EntityFrameworkCore;
 using School.Api.Middleware;
+using School.Domain.InterfacesRepository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -32,6 +34,8 @@ builder.Services.AddAutoMapper(typeof(MappingProfile));
 builder.Services.AddScoped<IPersonaRepository, PersonaRepository>();
 builder.Services.AddScoped<IPersonaService, PersonaService>();
 builder.Services.AddScoped<IDataBaseConnectionTester, DataBaseConnectionTester>();
+builder.Services.AddScoped<IRolesRepository, RolesRepository>();
+builder.Services.AddScoped<IRolesService, RolesService>();
 builder.Services.AddScoped(typeof(SyncRepository<>));
 
 // 1. Extraer la cadena de conexión del archivo appsettings.json
@@ -57,7 +61,9 @@ if (app.Environment.IsDevelopment())
 //builder.Services.AddScoped<PersonaService>();
 app.UseMiddleware<ErrorHandlingMiddleware>();
 
-app.UseHttpsRedirection();
+app.UseCors(options => options.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader());
+
+//app.UseHttpsRedirection();
 
 app.UseAuthorization();
 

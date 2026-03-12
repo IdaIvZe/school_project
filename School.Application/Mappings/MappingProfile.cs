@@ -30,6 +30,9 @@ namespace School.Application.Mappings
             CreateMap<Persona, PersonUpdateDto>();
             CreateMap<PersonUpdateDto, Persona>();
 
+            CreateMap<RolesDto, Roles>();
+            CreateMap<Roles, RolesDto>();
+
         }
 
     }
