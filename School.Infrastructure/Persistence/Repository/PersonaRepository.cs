@@ -105,9 +105,35 @@ namespace School.Infrastructure.Persistence.Repository
         }
 
 
-        public async Task<List<Persona>> GetAllByRol(string rol)
+        public async Task<PaginacionResponse<Persona>> GetAllByRol(string rol, int page = 0, int size = 100)
         {
-            return await _context.Personas.Where(p => p.Rol == rol).ToListAsync();
+
+            int offset = (page -1) * size;
+
+            var query = _context.Personas
+                .Where(p => p.Rol == rol)
+                .OrderBy(p => p.Id);
+
+            int totalRegistros = await query.CountAsync();
+
+            //Aplicar paginacion y ejecutar 
+            var datos = await query
+                .Skip(offset)
+                .Take(size)
+                .ToListAsync();
+
+            return new PaginacionResponse<Persona>
+            {
+                Datos = datos,
+                PaginaActual = page,
+                TamañoPagina = size,
+                TotalRegistros = totalRegistros,
+                TotalPaginas = (int)Math.Ceiling((double)totalRegistros / size),
+                TieneAnterior = page > 1,
+                TieneSiguiente = page * size < totalRegistros
+            };  
+
+            // return await _context.Personas.Where(p => p.Rol == rol).ToListAsync();
         }
 
 

@@ -9,6 +9,7 @@ namespace School.Application.DTOs
 {
     public class PersonaPorRolDto
     {
+        public int Id { get; set; }
         public string Nombres { get; set; } = string.Empty;
         public string Apellidos { get; set; } = string.Empty;
         public string Email { get; set; } = string.Empty;

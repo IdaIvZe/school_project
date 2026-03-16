@@ -40,18 +40,20 @@ namespace School.Api.Controllers
 
 
         [HttpGet("/personas/rol/{rol}")]
-        public async Task<ActionResult<ApiResponseDto<List<PersonaDto>>>> ObtenerPersonasPorRol( string rol)
+        public async Task<ActionResult<ApiResponseDto<List<PersonaDto>>>> ObtenerPersonasPorRol( string rol, int page , int size)
         {
 
-           var personasRol = await _personService.GetPersonsByRol(rol);
+           var personasRol = await _personService.GetPersonsByRol(rol, page, size);
+
+
 
             var response = new ApiResponseDto<List<PersonaPorRolDto>>
             {
-                
+
                 Status = 200,
-                Data = personasRol,
                 Success = true,
-                Message = "Lista de personas obtenida exitosamente"
+                Message = "Lista de personas obtenida exitosamente",
+                paginacion = personasRol
 
             };
             

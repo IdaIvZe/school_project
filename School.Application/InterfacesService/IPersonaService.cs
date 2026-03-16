@@ -16,7 +16,8 @@ namespace School.Application.InterfacesService
 
         Task<Persona> Crearpersona(PersonaDto dtoPersona);
 
-        Task<List<PersonaPorRolDto>> GetPersonsByRol(string rol);
+        //<PersonaPorRolDto>
+        Task<PaginacionResponse<PersonaPorRolDto>> GetPersonsByRol(string rol, int page, int size);
 
         Task<PersonaCredenciales> GetCredential( LoginDto loginData);
 

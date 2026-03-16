@@ -14,6 +14,8 @@ namespace School.Application.DTOs.ApiResponse
         public string Message { get; set; } = string.Empty;
         public List<string>? Errors { get; set; }
 
+        public  object?  paginacion { get; set; }
+
       public ApiResponseDto()
        {
        

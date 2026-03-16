@@ -1,18 +1,17 @@
 ﻿using AutoMapper;
+using Microsoft.Extensions.Options;
 using School.Application.DTOs;
-
+using School.Application.DTOs;
+using School.Application.InterfacesService;
 using School.Domain;
 using School.Domain.Entities;
-using School.Application.DTOs;
 using School.Domain.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-using School.Application.InterfacesService;
-using Microsoft.Extensions.Options;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace School.Application.Services
 {
@@ -29,22 +28,36 @@ namespace School.Application.Services
             return crearPersona;
         }
 
-
-        public async Task<List<PersonaPorRolDto>> GetPersonsByRol(string rol)
+        //List<PersonaPorRolDto>
+        public async Task<PaginacionResponse<PersonaPorRolDto>> GetPersonsByRol(string rol, int page, int size)
         {  
-            var obtenerPersonas = await personaRepository.GetAllByRol(rol);
+            var obtenerPersonas = await personaRepository.GetAllByRol(rol, page, size);
 
             List<PersonaPorRolDto> personasRol = new List<PersonaPorRolDto>();
 
-
-            foreach (Persona personas in obtenerPersonas)
+            if (obtenerPersonas.Datos == null || obtenerPersonas.Datos.Count == 0) {
+                return null;
+            }
+            
+            foreach (Persona personas in obtenerPersonas.Datos)
             {
                 var personaPorRol = mapper.Map<PersonaPorRolDto>(personas);
 
                 personasRol.Add(personaPorRol);
-            } 
+            }
 
-            return personasRol; 
+            return new PaginacionResponse<PersonaPorRolDto>
+            {
+                Datos = personasRol,
+                PaginaActual = obtenerPersonas.PaginaActual,
+                TamañoPagina = obtenerPersonas.TamañoPagina,
+                TotalRegistros = obtenerPersonas.TotalRegistros,
+                TotalPaginas = obtenerPersonas.TotalPaginas,
+                TieneAnterior = obtenerPersonas.TieneAnterior,
+                TieneSiguiente = obtenerPersonas.TieneSiguiente
+            };
+
+
         }
  
 
