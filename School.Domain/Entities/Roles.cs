@@ -13,5 +13,7 @@ namespace School.Domain.Entities
         public string? CodigoRol { get; set; }
         public string? DescripcionRol { get; set; }
 
+        public ICollection<Persona> Personas { get; set; } = new List<Persona>();
+
     }
 }

@@ -26,7 +26,15 @@ namespace School.Infrastructure.Persistence.Data
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(LocalDbContext).Assembly);
             base.OnModelCreating(modelBuilder);
 
+
+            modelBuilder.Entity<Persona>()
+                .HasMany(p => p.Roles)
+                .WithMany(r => r.Personas)
+                .UsingEntity(j => j.ToTable("PersonaRoles"));
+
         }
+
+
         public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {
             foreach (EntityEntry entry in ChangeTracker.Entries())

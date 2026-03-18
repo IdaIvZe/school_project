@@ -30,7 +30,7 @@ namespace School.Domain.Interfaces
 
         public Task<List<Persona>> GetAllByPendingSyncAsync();
 
-        public Task<PaginacionResponse<Persona>> GetAllByRol(string rol, int page, int size);
+        public Task<PaginacionResponse<Persona>> GetAllByRol(int rol, int page, int size);
 
     }
 }

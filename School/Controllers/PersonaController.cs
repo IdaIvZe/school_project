@@ -4,10 +4,11 @@
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using School.Application.DTOs;
+using School.Application.DTOs.ApiResponse;
+using School.Application.InterfacesService;
 //using School.Domain.DTOs;
 using School.Application.Services;
-using School.Application.InterfacesService;
-using School.Application.DTOs.ApiResponse;
+using School.Domain.Entities;
 namespace School.Api.Controllers
 {
 
@@ -32,15 +33,20 @@ namespace School.Api.Controllers
 
             var obj = await _personService.Crearpersona(dtoPersona);
 
-           
 
-            return Ok(obj);
-                
+
+            // return Ok(obj);
+            return Ok(new
+            {
+                id = obj.Id,
+                mensaje = "Persona creada exitosamente"
+            });
+
         }
 
 
         [HttpGet("/personas/rol/{rol}")]
-        public async Task<ActionResult<ApiResponseDto<List<PersonaDto>>>> ObtenerPersonasPorRol( string rol, int page , int size)
+        public async Task<ActionResult<ApiResponseDto<List<PersonaDto>>>> ObtenerPersonasPorRol( int rol, int page , int size)
         {
 
            var personasRol = await _personService.GetPersonsByRol(rol, page, size);

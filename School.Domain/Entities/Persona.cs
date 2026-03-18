@@ -25,7 +25,9 @@ namespace School.Domain.Entities
         public EstadoPersona Estado { get; set; }
         public DateTime FechaCreacion { get; set; }
         public DateTime FechaActualizacion { get; set; }
-        public string Rol { get; set; } = string.Empty;
+
+        //public string Rol { get; set; } = string.Empty;
+        public ICollection<Roles> Roles { get; set; } = new List<Roles>();
 
         //Propiedades de sincronizacion
         public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;//TimeZoneInfo.ConvertTime(DateTime.UtcNow, TimeZoneInfo.FindSystemTimeZoneById("Central America Standard Time"));

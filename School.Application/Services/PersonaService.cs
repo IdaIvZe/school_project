@@ -29,7 +29,7 @@ namespace School.Application.Services
         }
 
         //List<PersonaPorRolDto>
-        public async Task<PaginacionResponse<PersonaPorRolDto>> GetPersonsByRol(string rol, int page, int size)
+        public async Task<PaginacionResponse<PersonaPorRolDto>> GetPersonsByRol(int rol, int page, int size)
         {  
             var obtenerPersonas = await personaRepository.GetAllByRol(rol, page, size);
 

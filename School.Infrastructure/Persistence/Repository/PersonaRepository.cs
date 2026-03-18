@@ -34,8 +34,20 @@ namespace School.Infrastructure.Persistence.Repository
 
         public async Task<Persona> AddAsync(Persona persona)
         {
+
+            // 2. IMPORTANTE: Marcar los roles como "Unchanged" (ya existen)
+            foreach (var rol in persona.Roles)
+            {
+                _context.Entry(rol).State = EntityState.Unchanged;
+                // o: _context.Roles.Attach(rol);
+            }
+
             await _context.Personas.AddAsync(persona);
             await _context.SaveChangesAsync();
+
+           // await _context.Add();
+
+            
 
             return persona;
         }
@@ -45,9 +57,10 @@ namespace School.Infrastructure.Persistence.Repository
         {
             var objPersona = await _context.Personas.FindAsync(id);
 
-            if (objPersona == null) throw new BusinessException("Perrsona no encontrada");
 
-            if(!persona.Nombres.IsNullOrEmpty())
+            if (objPersona == null) throw new BusinessException("Perrsona no encontrada");
+            
+            if (!persona.Nombres.IsNullOrEmpty())
             objPersona.Nombres   =   persona.Nombres;
 
             if (!persona.Apellidos.IsNullOrEmpty())
@@ -67,10 +80,10 @@ namespace School.Infrastructure.Persistence.Repository
 
                 objPersona.Estado    =   persona.Estado;
                 objPersona.FechaActualizacion =  DateTime.UtcNow;
-                objPersona.SyncStatus    =   SyncStatus.Pending;
+                objPersona.SyncStatus = SyncStatus.Pending;
 
-            if (!persona.Rol.IsNullOrEmpty())
-                objPersona.Rol       = persona.Rol;
+            //if (!persona.Roles.IsNullOrEmpty())
+            //    objPersona.Roles.Add(persona.Roles);
 
             await _context.SaveChangesAsync();
 
@@ -105,22 +118,23 @@ namespace School.Infrastructure.Persistence.Repository
         }
 
 
-        public async Task<PaginacionResponse<Persona>> GetAllByRol(string rol, int page = 0, int size = 100)
+        public async Task<PaginacionResponse<Persona>> GetAllByRol(int rol, int page = 0, int size = 100)
         {
 
             int offset = (page -1) * size;
 
-            var query = _context.Personas
-                .Where(p => p.Rol == rol)
-                .OrderBy(p => p.Id);
+            IQueryable<Persona>  personasPorRol() => _context.Roles.Where(r => r.IdRol ==  rol).SelectMany(r => r.Personas);
 
-            int totalRegistros = await query.CountAsync();
+
+            int totalRegistros = await personasPorRol().CountAsync();
 
             //Aplicar paginacion y ejecutar 
-            var datos = await query
+            var datos = await personasPorRol()
                 .Skip(offset)
                 .Take(size)
                 .ToListAsync();
+
+
 
             return new PaginacionResponse<Persona>
             {
@@ -133,7 +147,6 @@ namespace School.Infrastructure.Persistence.Repository
                 TieneSiguiente = page * size < totalRegistros
             };  
 
-            // return await _context.Personas.Where(p => p.Rol == rol).ToListAsync();
         }
 
 
@@ -158,7 +171,7 @@ namespace School.Infrastructure.Persistence.Repository
                     Password = p.Password,
                     Nombres = p.Nombres,
                     Apellidos = p.Apellidos,
-                    Rol = p.Rol
+                    //Rol = p.Rol
 
                 }
                 ).FirstOrDefaultAsync();
@@ -168,7 +181,7 @@ namespace School.Infrastructure.Persistence.Repository
             personCredential.Password = credential.Password;
             personCredential.Nombres = credential.Nombres;
             personCredential.Apellidos = credential.Apellidos;
-            personCredential.Rol = credential.Rol;
+            //personCredential.Rol = credential.Rol;
 
 
             return personCredential;
